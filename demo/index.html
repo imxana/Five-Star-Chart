@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+
+    <title>FSC Example</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+        .container {
+            max-width: 32rem;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 50px;
+        }
+        h1 {
+            font-size: 54px;
+            color: #333;
+            margin: 30px 0 10px;
+        }
+        h2 {
+            font-size: 22px;
+            color: #555;
+        }
+        h3 {
+            font-size: 24px;
+            color: #555;
+        }
+        hr {
+            display: block;
+            width: 7rem;
+            height: 1px;
+            margin: 2.5rem 0;
+            background-color: #eee;
+            border: 0;
+        }
+        a {
+            color: #08c;
+            text-decoration: none;
+        }
+        p {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>FSC</h1>
+        <h2>(=・ω・=) A easy way to show model ability.</h2>
+        <p>Made by <a href="https://www.mikumiku.com.cn/" target="_blank">XANA</a>. Available on <a href="https://github.com/imxana/Five-Star-Chart" target="_blank">GitHub</a>. Licensed MIT.</p>
+        <hr>
+        <h3>ex1</h3>
+        <div id="ex1" class="fsc"></div>
+        <h3>ex2</h3>
+        <div id="ex2" class="fsc"></div>
+    </div>
+    <script src="../src/fsc.js"></script>
+    <script>
+
+        let fsc1 = new FSC({
+            element: document.getElementById('ex1'),
+            border : true,
+            data: {'参战能力':2, '推塔能力':2, '打钱能力':3, '辅助能力':4, '多面能力':4.5}
+        });
+
+        let fsc2 = new FSC({
+            element: document.getElementById('ex2'),
+            border : true,
+            font: "20px Arial",
+            data: {'偷':4, '稳':2, '莽':3, '狗':4, '谐':5, '奶':3}
+        });
+
+    </script>
+
+</body>
+</html>
